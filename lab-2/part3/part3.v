@@ -1,6 +1,6 @@
 
 
-module hex_display (SW, HEX0);
+module part3 (SW, HEX0);
   input [3:0] SW;
   output [6:0] HEX0;
 
