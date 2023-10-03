@@ -7,7 +7,7 @@ module part2setup(input [7:0] SW, input [1:0] KEY, output [7:0] LEDR, output [6:
   part2 ALU (SW[7:4], SW[3:0], KEY, LEDR);
   
   hex_decoder ALUOut_display1 (LEDR[7:4], HEX4);
-  hex_decoder ALUOut_display2 (LEDR[3:0], HEX3);
+  hex_decoder ALUOut_display1 (LEDR[3:0], HEX3);
 endmodule
 
 
