@@ -21,8 +21,8 @@ module part3 (A, B, Function, ALUout);
   begin
     case (Function)
       0: ALUout = A+B;
-      1: ALUout = {(2*N-1){1'b0}, |{A, B}};
-      2: ALUout = {(2*N-1){1'b0}, &{A, B}};
+      1: ALUout = |{A, B};
+      2: ALUout = &{A, B};
       3: ALUout = {A, B};
       default: ALUout = 0;
     endcase
