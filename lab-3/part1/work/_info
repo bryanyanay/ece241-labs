@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-3/part1
 vfull_adder
-Z1 !s110 1696215780
+Z1 !s110 1696349562
 !i10b 1
 !s100 jP_1OJ_0neP<gb[GYXm=l1
 INiK_LABNc42<i0dWMAl@X0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1696215780.000000
+Z7 !s108 1696349562.000000
 Z8 !s107 part1.v|
 Z9 !s90 -reportprogress|300|-novopt|part1.v|
 !i113 1
