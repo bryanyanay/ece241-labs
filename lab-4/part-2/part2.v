@@ -22,9 +22,9 @@ module part2(Clock, Reset_b, Data, Function, ALUout);
   always @(posedge Clock) 
   begin
     if (Reset_b)
-      ALUout = 0;
+      ALUout <= 0;
     else 
-      ALUout = pregALUout;
+      ALUout <= pregALUout;
   end
 
 endmodule
