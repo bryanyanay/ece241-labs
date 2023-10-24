@@ -9,31 +9,71 @@ z2
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-5/part-2
 vDisplayCounter
-Z1 !s110 1698163973
+Z1 !s110 1698168260
 !i10b 1
-!s100 5dzD<fa6__l7HgVS:k^HD0
-Il4kR0a8BS42ol`9G?c7]d3
+!s100 VPRSh_o5M;O?5C6ZlbkgC0
+ISKfz>1E:BKKAAPATY?6l<1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1698096481
+Z3 w1698167876
 Z4 8part2.v
 Z5 Fpart2.v
-L0 10
+L0 52
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1698163973.000000
+Z7 !s108 1698168260.000000
 Z8 !s107 part2.v|
 Z9 !s90 -reportprogress|300|-novopt|part2.v|
 !i113 1
 Z10 tCvgOpt 0
 n@display@counter
+vhex_decoder
+R1
+!i10b 1
+!s100 NUB5nLY5nlb]OX9N2RDGZ2
+I93h3VEIDz1K4i_okjnC8S1
+R2
+R0
+R3
+R4
+R5
+L0 11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
 vpart2
 R1
 !i10b 1
-!s100 hk7W2FiCY9QM5@iJ[CK>40
-Ia81[YQAXda=APLYJL]`?g2
+!s100 eXl4O0oKL8feZ`4I6nbI61
+I?GFQ2oW<zKJd^2USff>m12
+R2
+R0
+R3
+R4
+R5
+L0 45
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart2setup
+R1
+!i10b 1
+!s100 d]6SUJiC_h<1FUQfS94N=2
+IVRWIGc0DYXlP?TRfZ5hO80
 R2
 R0
 R3
@@ -52,14 +92,14 @@ R10
 vRateDivider
 R1
 !i10b 1
-!s100 R[j=h6z8ifX`o7_VJ5D8@2
-I>^^@oXLScBnF:7`U]VbbN3
+!s100 oIOnolXM<L[7JH57N5?j@0
+IS4egJB]O4]DOUC@2JXaj60
 R2
 R0
 R3
 R4
 R5
-L0 29
+L0 71
 R6
 r1
 !s85 0
