@@ -3,7 +3,7 @@
 module part2setup (input CLOCK_50, input SW[9:0], output HEX0);
   wire [3:0] counterValue;
 
-  part2 #(parameter CLOCK_FREQUENCY = 50000000) p2 (CLOCK_50, SW[9], SW[1:0], counterValue[3:0]);
+  part2 #(50000000) p2 (CLOCK_50, SW[9], SW[1:0], counterValue[3:0]);
   hex_decoder hd (counterValue[3:0], HEX0);
 endmodule
 
