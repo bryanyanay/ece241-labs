@@ -28,6 +28,7 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
 
   ratediv #(CLOCK_FREQUENCY) RD (ClockIn, Start, Enable);
   shiftreg SR (ClockIn, Enable, Start, letterBits, Reset, DotDashOut, NewBitOut);
+
 endmodule
 
 module ratediv #(parameter CLOCK_FREQUENCY=100) (input Clock, input Reset, output Enable);
@@ -51,7 +52,7 @@ module shiftreg (input Clock, input Enable, input ParallelLoad, input [11:0] Loa
 
   always @(posedge Clock)
   begin
-    if (NewBitOut) NewBitOut <= 0;
+    NewBitOut <= 0;
 
     if (Reset)
       bits <= 13'b0;
