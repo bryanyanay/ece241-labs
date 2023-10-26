@@ -21,7 +21,7 @@ module part3
 		begin
 			shift_reg <= 12'b0;
 			counter <= 0;
-			bitCounter <= 12'b111111111111;
+			bitCounter <= 0;
 		end 
 		else 
 		begin
@@ -37,6 +37,7 @@ module part3
 					3'b110 : current_code <= 12'b111011100000;
 					3'b111 : current_code <= 12'b101010101000; 
 				endcase
+				bitCounter <= 12'b111111111111;
 			end
 			
 			if (counter == PULSE_DURATION) 
