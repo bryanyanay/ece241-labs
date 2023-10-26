@@ -26,7 +26,7 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
 
   wire Enable;
 
-  ratediv RD #(CLOCK_FREQUENCY) (ClockIn, Start, Enable);
+  ratediv #(CLOCK_FREQUENCY) RD (ClockIn, Start, Enable);
   shiftreg SR (ClockIn, Enable, Start, letterBits, Reset, DotDashOut, NewBitOut);
 endmodule
 
