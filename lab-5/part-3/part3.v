@@ -8,7 +8,6 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
   output wire DotDashOut, 
   output wire NewBitOut);
 
-
   reg [11:0] letterBits;
 
   always @(*) 
@@ -25,19 +24,10 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
     endcase
   end
 
-  reg ParallelLoad;
+  wire Enable;
 
-  always @(posedge Clock)
-  begin
-    if (Start) 
-      ParallelLoad <= 1;
-    else
-      ParallelLoad <= 0;
-  end  
-
-  ratediv RD #(CLOCK_FREQUENCY) (Clock, Reset, NewBitOut);
-  shiftreg SR (Clock, NewBitOut, ParallelLoad, letterBits, DotDashOut);
-
+  ratediv RD #(CLOCK_FREQUENCY) (ClockIn, Start, Enable);
+  shiftreg SR (ClockIn, Enable, Start, letterBits, Reset, DotDashOut, NewBitOut);
 endmodule
 
 module ratediv #(parameter CLOCK_FREQUENCY=100) (input Clock, input Reset, output Enable);
@@ -46,7 +36,7 @@ module ratediv #(parameter CLOCK_FREQUENCY=100) (input Clock, input Reset, outpu
   always @(posedge Clock)
   begin
     if (Reset)
-      counter <= 0;
+      counter <= (CLOCK_FREQUENCY >> 2);
     else if (counter == 0) 
       counter <= (CLOCK_FREQUENCY >> 2);
     else 
@@ -56,16 +46,23 @@ module ratediv #(parameter CLOCK_FREQUENCY=100) (input Clock, input Reset, outpu
   assign Enable = (counter == 0) ? 1'b1 : 1'b0;
 endmodule
 
-module shiftreg (input Clock, input Enable, input ParallelLoad, input [11:0] LoadVal, output ShiftOut);
-  reg [11:0] bits;
+module shiftreg (input Clock, input Enable, input ParallelLoad, input [11:0] LoadVal, input Reset, output ShiftOut, output reg NewBitOut);
+  reg [12:0] bits;
 
   always @(posedge Clock)
   begin
-    if (ParallelLoad)
-      bits <= LoadVal;
+    if (NewBitOut) NewBitOut <= 0;
+
+    if (Reset)
+      bits <= 13'b0;
+    else if (ParallelLoad)
+      bits <= {1'b0, LoadVal};
     else if (Enable)
-      bits <= {bits[10:0], 1'b0};
+    begin
+      NewBitOut <= 1;
+      bits <= {bits[11:0], 1'b0};
+    end
   end
 
-  assign ShiftOut = bits[11];
+  assign ShiftOut = bits[12];
 endmodule
