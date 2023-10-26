@@ -14,7 +14,7 @@ module part3
 	reg [11:0] shift_reg;
 	reg [1 + $clog2(CLOCK_FREQUENCY):0] counter = 0;
 
-	reg [11:0] bitCounter;
+	reg [12:0] bitCounter;
 
 	always @(posedge ClockIn) begin
 		if (Reset) 
@@ -37,7 +37,7 @@ module part3
 					3'b110 : current_code <= 12'b111011100000;
 					3'b111 : current_code <= 12'b101010101000; 
 				endcase
-				bitCounter <= 12'b111111111111;
+				bitCounter <= 13'b1111111111111;
 			end
 			
 			if (counter == PULSE_DURATION) 
