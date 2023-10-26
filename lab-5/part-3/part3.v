@@ -13,14 +13,14 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
   always @(*) 
   begin
     case (Letter)
-      3'b000: letterBits = 101110000000;
-      3'b001: letterBits = 111010101000;
-      3'b010: letterBits = 111010111010;
-      3'b011: letterBits = 111010100000;
-      3'b100: letterBits = 100000000000;
-      3'b101: letterBits = 101011101000;
-      3'b110: letterBits = 111011101000;
-      3'b111: letterBits = 101010100000;
+      3'b000: letterBits = 12'b101110000000;
+      3'b001: letterBits = 12'b111010101000;
+      3'b010: letterBits = 12'b111010111010;
+      3'b011: letterBits = 12'b111010100000;
+      3'b100: letterBits = 12'b100000000000;
+      3'b101: letterBits = 12'b101011101000;
+      3'b110: letterBits = 12'b111011101000;
+      3'b111: letterBits = 12'b101010100000;
     endcase
   end
 
