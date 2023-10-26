@@ -58,7 +58,6 @@ module shiftreg (input Clock, input Enable, input ParallelLoad, input [11:0] Loa
     if (Reset)
     begin
       bits <= 13'b0;
-      count <= 0;
     end
     else if (ParallelLoad)
     begin
