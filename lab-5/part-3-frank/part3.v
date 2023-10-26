@@ -30,12 +30,12 @@ module part3
 				case(Letter)
 					3'b000 : current_code <= 12'b101110000000;
 					3'b001 : current_code <= 12'b111010101000;
-					3'b010 : current_code <= 12'b111010111000;
+					3'b010 : current_code <= 12'b111010111010;
 					3'b011 : current_code <= 12'b111010100000;
-					3'b100 : current_code <= 12'b101000000000;
-					3'b101 : current_code <= 12'b101010111000;
-					3'b110 : current_code <= 12'b111011100000;
-					3'b111 : current_code <= 12'b101010101000; 
+					3'b100 : current_code <= 12'b100000000000;
+					3'b101 : current_code <= 12'b101011101000;
+					3'b110 : current_code <= 12'b111011101000;
+					3'b111 : current_code <= 12'b101010100000; 
 				endcase
 				bitCounter <= 13'b1111111111111;
 			end
@@ -55,7 +55,7 @@ module part3
 	end
 
 	assign DotDashOut = shift_reg[11];
-	assign NewBitOut = (counter == 0 && ~Reset && bitCounter > 0) ? 1'b1 : 1'b0;
+	assign NewBitOut = (counter == 0 && bitCounter > 0) ? 1'b1 : 1'b0;
 
 endmodule
 
