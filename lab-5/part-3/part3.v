@@ -31,7 +31,7 @@ module part3 #(parameter CLOCK_FREQUENCY=100)
 endmodule
 
 module ratediv #(parameter CLOCK_FREQUENCY=100) (input Clock, input Reset, output Enable);
-  reg [$clog2(CLOCK_FREQUENCYcounter) - 2:0] counter;
+  reg [$clog2(CLOCK_FREQUENCY) - 2:0] counter;
 
   always @(posedge Clock)
   begin
