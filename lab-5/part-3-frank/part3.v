@@ -14,11 +14,14 @@ module part3
 	reg [11:0] shift_reg;
 	reg [1 + $clog2(CLOCK_FREQUENCY):0] counter = 0;
 
+	reg [11:0] bitCounter;
+
 	always @(posedge ClockIn) begin
 		if (Reset) 
 		begin
 			shift_reg <= 12'b0;
 			counter <= 0;
+			bitCounter <= 12'b111111111111;
 		end 
 		else 
 		begin
@@ -41,6 +44,7 @@ module part3
 				counter <= 0;
 				shift_reg <= current_code;
 				current_code <= current_code << 1;
+				bitCounter <= (bitCounter << 1);
 			end 
 			else 
 			begin
@@ -50,7 +54,7 @@ module part3
 	end
 
 	assign DotDashOut = shift_reg[11];
-	assign NewBitOut =(counter == 0 && ~Reset) ? 1'b1 : 1'b0;
+	assign NewBitOut = (counter == 0 && ~Reset && bitCounter > 0) ? 1'b1 : 1'b0;
 
 endmodule
 
