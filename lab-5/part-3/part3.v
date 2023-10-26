@@ -49,18 +49,30 @@ endmodule
 
 module shiftreg (input Clock, input Enable, input ParallelLoad, input [11:0] LoadVal, input Reset, output ShiftOut, output reg NewBitOut);
   reg [12:0] bits;
+  reg [4:0] count;
 
   always @(posedge Clock)
   begin
     NewBitOut <= 0;
 
     if (Reset)
+    begin
       bits <= 13'b0;
+      count <= 0;
+    end
     else if (ParallelLoad)
+    begin
       bits <= {1'b0, LoadVal};
+      count <= 0;
+    end
     else if (Enable)
     begin
-      NewBitOut <= 1;
+      if (count < 12) 
+      begin
+        count <= count + 1;
+        NewBitOut <= 1;
+      end
+
       bits <= {bits[11:0], 1'b0};
     end
   end

@@ -18,4 +18,4 @@ force Letter 000
 run 250ms
 force Start 0
 
-run 5000ms
+run 20000ms
