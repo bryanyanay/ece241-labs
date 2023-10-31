@@ -7,11 +7,11 @@ vsim part1
 log {/*}
 add wave {/*}
 
-force {clock} 0 0ns, 1 {5ns} -r 10ns
+force {Clock} 0 0ns, 1 {5ns} -r 10ns
 
-force resetn 0
+force Reset 1
 run 10ns
-force resetn 1
+force Reset 0
 
 force w 1
 run 40ns
@@ -23,8 +23,8 @@ run 10ns
 force w 1
 run 30ns
 
-force resetn 0
+force Reset 1
 run 20ns
-force resetn 1
+force Reset 0
 
 run 40ns

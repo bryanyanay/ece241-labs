@@ -8,23 +8,63 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-6/part-1
-vpart1
-!s110 1698526380
+vhex_decoder
+Z1 !s110 1698769951
 !i10b 1
-!s100 o_2U@1[ofn4Al8_;6UX0@2
-IX_oGY=GE55>IX4J1o@d3[1
-VDg1SIo80bB@j0V0VzS_@n1
+!s100 FZnlAzWU21PeXfGTI4`Qh1
+IAGUVIN`^:<zl;jb^Fl99o3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1698525056
-8part1.v
-Fpart1.v
-L0 11
-OV;L;10.5b;63
+Z3 w1698769949
+Z4 8part1.v
+Z5 Fpart1.v
+L0 20
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1698526380.000000
-!s107 part1.v|
-!s90 -reportprogress|300|-novopt|part1.v|
+Z7 !s108 1698769951.000000
+Z8 !s107 part1.v|
+Z9 !s90 -reportprogress|300|-novopt|part1.v|
 !i113 1
-tCvgOpt 0
+Z10 tCvgOpt 0
+vpart1
+R1
+!i10b 1
+!s100 ^PnHljVD=K]d8]ajFXd[e2
+I9jASonnz3X6jz<HR`9@<W2
+R2
+R0
+R3
+R4
+R5
+L0 54
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart1setup
+R1
+!i10b 1
+!s100 Eknja0VES<BLUa[U<;NVL1
+IHYUBM2F63XUH<Zz@Z3ISV0
+R2
+R0
+R3
+R4
+R5
+L0 11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10

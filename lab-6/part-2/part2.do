@@ -9,9 +9,9 @@ add wave {/*}
 
 force {Clock} 0 0ns, 1 {5ns} -r 10ns
 
-force Resetn 0
+force Reset 1
 run 10ns
-force Resetn 1
+force Reset 0
 
 force DataIn 10
 force Go 1
@@ -71,9 +71,9 @@ run 20ns
 force Go 0
 run 20ns
 
-force Resetn 0
+force Reset 1
 run 30ns
-force Resetn 1
+force Reset 0
 run 20ns
 
 force DataIn 100

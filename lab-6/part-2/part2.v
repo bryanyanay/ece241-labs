@@ -6,9 +6,9 @@
 //LEDR displays result
 //HEX0 & HEX1 also displays result
 
-module part2(Clock, Resetn, Go, DataIn, DataResult, ResultValid);
+module part2(Clock, Reset, Go, DataIn, DataResult, ResultValid);
     input Clock;
-    input Resetn;
+    input Reset;
     input Go;
     input [7:0] DataIn;
     output [7:0] DataResult;
@@ -22,7 +22,7 @@ module part2(Clock, Resetn, Go, DataIn, DataResult, ResultValid);
 
     control C0(
         .clk(Clock),
-        .resetn(Resetn),
+        .reset(Reset),
 
         .go(Go),
 
@@ -41,7 +41,7 @@ module part2(Clock, Resetn, Go, DataIn, DataResult, ResultValid);
 
     datapath D0(
         .clk(Clock),
-        .resetn(Resetn),
+        .reset(Reset),
 
         .ld_alu_out(ld_alu_out),
         .ld_x(ld_x),
@@ -63,7 +63,7 @@ module part2(Clock, Resetn, Go, DataIn, DataResult, ResultValid);
 
 module control(
     input clk,
-    input resetn,
+    input reset,
     input go,
 
     output reg  ld_a, ld_b, ld_c, ld_x, ld_r,
@@ -190,7 +190,7 @@ module control(
     // current_state registers
     always@(posedge clk)
     begin: state_FFs
-        if(!resetn)
+        if(reset)
             current_state <= S_LOAD_A;
         else
             current_state <= next_state;
@@ -199,7 +199,7 @@ endmodule
 
 module datapath(
     input clk,
-    input resetn,
+    input reset,
     input [7:0] data_in,
     input ld_alu_out,
     input ld_x, ld_a, ld_b, ld_c,
@@ -219,7 +219,7 @@ module datapath(
 
     // Registers a, b, c, x with respective input logic
     always@(posedge clk) begin
-        if(!resetn) begin
+        if(reset) begin
             a <= 8'b0;
             b <= 8'b0;
             c <= 8'b0;
@@ -240,7 +240,7 @@ module datapath(
 
     // Output result register
     always@(posedge clk) begin
-        if(!resetn) begin
+        if(reset) begin
             data_result <= 8'b0;
         end
         else

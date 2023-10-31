@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-6/part-2
 vcontrol
-Z1 !s110 1698535831
+Z1 !s110 1698770203
 !i10b 1
-!s100 7TUTKQn2;S9NA3Y76O=;<1
-ITZ5]iOzGT5?AhFdTJ=P5i2
+!s100 2=QAN7di7058Lh92<]nf_1
+I[;D;dH2PYeJECA4XmPTj;0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1698535177
+Z3 w1698770172
 Z4 8part2.v
 Z5 Fpart2.v
 L0 64
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1698535831.000000
+Z7 !s108 1698770202.000000
 Z8 !s107 part2.v|
 Z9 !s90 -reportprogress|300|-novopt|part2.v|
 !i113 1
@@ -31,8 +31,8 @@ Z10 tCvgOpt 0
 vdatapath
 R1
 !i10b 1
-!s100 64EJ2L@TST;2ARRjHDIY52
-IQJ;lJd[4?OzELj@Z<nZlg2
+!s100 KiOQNd_?2MhcDWW@9mIcS1
+IDMgo?8fBL^mUVkCK?YLKe3
 R2
 R0
 R3
@@ -51,8 +51,8 @@ R10
 vpart2
 R1
 !i10b 1
-!s100 l<Dm3OJk9?:KmVjUb>[F03
-I8iNWbRoLo5Zh29_VOYlfb3
+!s100 0^4zFQWbIL`;e0>_>Q=GN0
+I4X<fj_9C<V<Qg>8R^U]ol0
 R2
 R0
 R3
