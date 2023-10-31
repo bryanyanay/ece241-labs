@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-6/part-1
 vhex_decoder
-Z1 !s110 1698769951
+Z1 !s110 1698771917
 !i10b 1
 !s100 FZnlAzWU21PeXfGTI4`Qh1
 IAGUVIN`^:<zl;jb^Fl99o3
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1698769951.000000
+Z7 !s108 1698771917.000000
 Z8 !s107 part1.v|
 Z9 !s90 -reportprogress|300|-novopt|part1.v|
 !i113 1

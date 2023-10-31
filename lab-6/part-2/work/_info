@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-6/part-2
 vcontrol
-Z1 !s110 1698770203
+Z1 !s110 1698772085
 !i10b 1
 !s100 2=QAN7di7058Lh92<]nf_1
 I[;D;dH2PYeJECA4XmPTj;0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1698770202.000000
+Z7 !s108 1698772085.000000
 Z8 !s107 part2.v|
 Z9 !s90 -reportprogress|300|-novopt|part2.v|
 !i113 1
