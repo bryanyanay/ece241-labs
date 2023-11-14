@@ -3,7 +3,7 @@
 module fill
 	(
 		CLOCK_50,						//	On Board 50 MHz
-		// Your inputs and outputs here
+		SW, 							// Your inputs and outputs here
 		KEY,							// On Board Keys
 		// The ports below are for the VGA output.  Do not change.
 		VGA_CLK,   						//	VGA Clock
@@ -17,8 +17,11 @@ module fill
 	);
 
 	input			CLOCK_50;				//	50 MHz
-	input	[3:0]	KEY;					
+	input	[3:0]	KEY;
+				
 	// Declare your inputs and outputs here
+	input [9:0] SW;	
+
 	// Do not change the following outputs
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
@@ -66,5 +69,7 @@ module fill
 	// Put your code here. Your code should produce signals x,y,colour and writeEn
 	// for the VGA controller, in addition to any other functionality your design may require.
 	
-	
+	// nothing connected to oDone
+	part2 P2 (.iResetn(resetn),.iPlotBox(KEY[1]),.iBlack(KEY[2]),.iColour(SW[9:7]),.iLoadX(KEY[3]),.iXY_Coord(SW[6:0]),.iClock(CLOCK_50),.oX(x),.oY(y),.oColour(colour),.oPlot(writeEn));
+
 endmodule
