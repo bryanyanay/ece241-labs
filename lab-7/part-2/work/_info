@@ -1,0 +1,70 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tyron/OneDrive/Bryan/UofT/ece241-labs/lab-7/part-2
+vcontrol
+Z1 !s110 1699940584
+!i10b 1
+!s100 KS@1AW3]1hh9bHYhPNO3H0
+ICcLeV2@j83EcX@fNg`OOJ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1699939598
+Z4 8part2.v
+Z5 Fpart2.v
+L0 115
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1699940584.000000
+Z8 !s107 part2.v|
+Z9 !s90 -reportprogress|300|-novopt|part2.v|
+!i113 1
+Z10 tCvgOpt 0
+vdatapath
+R1
+!i10b 1
+!s100 h9UY=H@XD<I>m0;dXVTje3
+Ibh42[WN@?fE_:l@Nkdo;b3
+R2
+R0
+R3
+R4
+R5
+L0 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart2
+R1
+!i10b 1
+!s100 Bh:T57YPjWLZm0SK8PLR`2
+IWJ9:_`IYMC5dBD:Z=OnMJ3
+R2
+R0
+R3
+R4
+R5
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
